@@ -1,0 +1,76 @@
+.card {
+    max-width: 500px;
+    margin: auto;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.result {
+    font-size: 28px;
+    color: #2563eb;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    background: #2563eb;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+/* Text colors */
+.success {
+    color: green;
+}
+
+.warning {
+    color: orange;
+}
+
+.info {
+    color: gray;
+}
+
+.multiply {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Messages */
+.messages {
+    margin: 20px 0;
+}
+
+.message {
+    background: #e0f2fe;
+    padding: 8px;
+    border-radius: 6px;
+    margin-bottom: 5px;
+}

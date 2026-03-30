@@ -1,0 +1,41 @@
+<div class="task-container">
+
+    <h2>📋 Firebase Task Manager</h2>
+
+    <!-- CREATE -->
+    <div class="task-input">
+        <!-- Added (keyup.enter) so users can press Enter to add -->
+        <input type="text" [(ngModel)]="taskName" (keyup.enter)="addTask()" placeholder="Enter a new task...">
+        <button (click)="addTask()">Add Task</button>
+    </div>
+
+    <!-- TASK LIST -->
+    <div class="task-list">
+
+        <!-- Add the "async" pipe here to read the Observable stream -->
+        @for (task of tasks$ | async; track task.id) {
+        <div class="task-card">
+
+            <span class="task-name" [class.done]="task.isDone">
+                {{ task.name }}
+            </span>
+
+            <div class="actions">
+                <button class="update-btn" (click)="markAsDone(task.id, task.isDone)">
+                    @if (task.isDone) { Undo } @else { Done }
+                </button>
+
+                <button class="delete-btn" (click)="deleteTask(task.id)">
+                    Delete
+                </button>
+            </div>
+
+        </div>
+
+        } @empty {
+        <p class="empty">No tasks found. Add one above 👆</p>
+        }
+
+    </div>
+
+</div>

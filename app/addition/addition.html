@@ -1,0 +1,25 @@
+<div class="card">
+    <h1>Adding Numbers</h1>
+    <p>Enter numbers to check result with 10</p>
+
+    <div class="input-group">
+        <input type="number" [(ngModel)]="number1" placeholder="Enter first number">
+        <input type="number" [(ngModel)]="number2" placeholder="Enter second number">
+    </div>
+
+    <h2 class="result">{{ number1 + number2 }}</h2>
+
+    @if((number1+number2)==10){
+    <p class="success">Number is exactly 10</p>
+    } @else if((number1+number2)>10){
+    <p class="warning">Number is greater than 10</p>
+    } @else{
+    <p class="info">Number is smaller than 10</p>
+    }
+
+    <button (click)="multiply()">Multiply</button>
+
+    @if(multiplyresult!=null){
+    <p class="multiply">{{multiplyresult}}</p>
+    }
+</div>

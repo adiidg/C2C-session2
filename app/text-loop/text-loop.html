@@ -1,0 +1,19 @@
+<div class="card">
+    <h1>Text Loop Page</h1>
+
+    <!-- Input Field -->
+    <div class="input-group">
+        <input type="text" [(ngModel)]="newMessage" placeholder="Enter new message">
+        <button (click)="addText()">Add</button>
+    </div>
+
+    <!-- Messages -->
+    <div class="messages">
+        @for(msg of messages; track msg; let i = $index){
+        <div class="message-row">
+            <p class="message">{{msg}}</p>
+            <button class="delete-btn" (click)="removeText(i)">Remove</button>
+        </div>
+        }
+    </div>
+</div>
